@@ -8,7 +8,7 @@ export default class Home extends PureComponent{
         return (
             <div>
                 home
-                {/* <Link to='home/web'>web</Link> */}
+                <Link to='home/web'>web</Link>
             </div>
         )
     }

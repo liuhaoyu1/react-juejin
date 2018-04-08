@@ -9,6 +9,9 @@ import Source from '../src/containers/Source'
 
 //home
 import Web from '../src/containers/Home/Web'
+//home -web
+import Aja from '../src/containers/Home/Web/Aja'
+import A from '../src/containers/Home/Web/Aja/Ajax'
 export default class RouterMap extends PureComponent{
     constructor(props){
         super(props)
@@ -18,9 +21,15 @@ export default class RouterMap extends PureComponent{
                 <Router history={this.props.history}>
                    <Route path="/" component={App}>
                         <IndexRoute component = {Home} />
-                        <Route path='/home'>
+                        <Route path='home'>
                             <IndexRoute component = {Home} />
-                            {/* <Route path='web' component={Web}></Route> */}
+                            <Route path='web'>
+                                <IndexRoute component = {Web} />
+                                <Route path='aja' component = {Aja} >
+                                     {/* <IndexRoute component = {Aja} /> */}
+                                </Route>
+                                <Route path='a' component = {A}></Route>
+                            </Route>
                         </Route>
                         <Route path='booklet'>
                             <IndexRoute component = {Booklet} />
